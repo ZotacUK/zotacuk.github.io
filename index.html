@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZotacUK | Links</title>
+  <meta name="description" content="All my links — Twitch, socials, and gaming profiles." />
+
+  <!-- Open Graph (nice previews when shared) -->
+  <meta property="og:title" content="ZotacUK | Links" />
+  <meta property="og:description" content="Twitch + socials + gaming profiles." />
+  <meta property="og:type" content="website" />
+  <!-- Optional: add a preview image -->
+  <!-- <meta property="og:image" content="https://yourdomain.com/preview.jpg" /> -->
+
+  <style>
+    :root{
+      --bg:#07070b;
+      --panel:#0f1017;
+      --text:#e9e9f4;
+      --muted:#a9aac2;
+      --accent:#7c3aed;   /* purple */
+      --accent2:#22c55e;  /* green */
+      --ring: rgba(124,58,237,.35);
+      --border: rgba(255,255,255,.08);
+      --shadow: 0 14px 35px rgba(0,0,0,.55);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 20% -10%, rgba(124,58,237,.25), transparent 60%),
+        radial-gradient(900px 500px at 110% 10%, rgba(34,197,94,.18), transparent 55%),
+        radial-gradient(900px 500px at 50% 120%, rgba(56,189,248,.12), transparent 55%),
+        var(--bg);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px 16px;
+    }
+    .wrap{
+      width:min(720px, 100%);
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      overflow:hidden;
+      position:relative;
+    }
+    .top{
+      padding:26px 22px 18px;
+      display:flex;
+      gap:16px;
+      align-items:center;
+      border-bottom:1px solid var(--border);
+      background: rgba(0,0,0,.18);
+      backdrop-filter: blur(8px);
+    }
+    .avatar{
+      width:140px; height:140px;
+      border-radius:30px;
+      border:1px solid var(--border);
+      background: #111217;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      flex:0 0 auto;
+    }
+    .avatar img{width:100%; height:100%; object-fit:cover}
+    .name{
+      font-size:20px;
+      font-weight:800;
+      letter-spacing:.2px;
+      line-height:1.2;
+    }
+    .tagline{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.4;
+    }
+    .badges{
+      margin-top:10px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .badge{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      color:var(--text);
+      background: rgba(255,255,255,.04);
+    }
+    .badge.live{
+      border-color: rgba(34,197,94,.35);
+      box-shadow: 0 0 0 4px rgba(34,197,94,.10);
+    }
+    .badge.live span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    .dot{
+      width:8px; height:8px;
+      border-radius:999px;
+      background: var(--accent2);
+      box-shadow: 0 0 0 5px rgba(34,197,94,.18);
+      display:inline-block;
+    }
+
+    .content{ padding:18px 18px 10px; }
+    .section-title{
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin:8px 6px 10px;
+    }
+
+    .links{
+      display:grid;
+      gap:12px;
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    a.btn{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      text-decoration:none;
+      color:var(--text);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:14px 14px;
+      background: rgba(0,0,0,.20);
+      transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease, background .12s ease;
+      outline:none;
+    }
+    a.btn:hover{
+      transform: translateY(-1px);
+      border-color: rgba(124,58,237,.35);
+      box-shadow: 0 0 0 5px var(--ring);
+      background: rgba(0,0,0,.28);
+    }
+    .left{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+    .icon{
+      width:42px; height:42px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      display:grid;
+      place-items:center;
+      flex:0 0 auto;
+    }
+    .label{
+      display:flex;
+      flex-direction:column;
+      min-width:0;
+    }
+    .label b{
+      font-size:15px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .label small{
+      color:var(--muted);
+      font-size:12px;
+      margin-top:3px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .arrow{
+      opacity:.9;
+      flex:0 0 auto;
+      font-size:18px;
+    }
+    .footer{
+      padding:14px 18px 18px;
+      color:var(--muted);
+      font-size:12px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      border-top:1px solid var(--border);
+    }
+    .footer a{ color:var(--muted); text-decoration:none; border-bottom:1px dotted rgba(255,255,255,.25); }
+    .footer a:hover{ color:var(--text); border-bottom-color: rgba(255,255,255,.55); }
+
+
+
+
+
+
+.icon img{
+  width:22px;
+  height:22px;
+  object-fit:contain;
+  display:block;
+}
+
+
+
+@media (max-width: 600px){
+  .top{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .avatar{
+    width:96px;
+    height:96px;
+    margin-bottom:12px;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="card">
+
+      <!-- HEADER -->
+      <header class="top">
+        <div class="avatar" aria-label="Profile image">
+          <!-- Replace avatar.png with your image filename -->
+          <img src="avatar.png" alt="ZotacUK avatar" onerror="this.remove(); this.parentNode.textContent='Z';" />
+        </div>
+
+        <div style="min-width:0">
+          <div class="name">ZotacUK</div>
+          <div class="tagline">Streamer • FPS / Fighters • UK • Live most evenings</div>
+
+          <div class="badges">
+            <!-- Toggle LIVE badge: set data-live="true" below -->
+            <div class="badge live" id="liveBadge" style="display:none;">
+              <span><i class="dot"></i> LIVE on Twitch</span>
+            </div>
+            <div class="badge">Twitch main</div>
+            <div class="badge">Clips + highlights</div>
+          </div>
+        </div>
+      </header>
+
+
+
+
+
+
+      <!-- LINKS -->
+      <div class="content">
+        <div class="section-title">Main</div>
+        <ul class="links">
+          <li>
+            <a class="btn" href="https://www.twitch.tv/zotacuk" target="_blank" rel="noopener">
+              <span class="left">
+                <span class="icon">
+  <img src="icons/twitch.svg" alt="Twitch">
+</span>
+
+                <span class="label">
+                  <b>Twitch</b>
+                  <small>Live Streams and Replays</small>
+                </span>
+              </span>
+              <span class="arrow">›</span>
+            </a>
+          </li>
+
+
+
+
+
+          <!-- Replace these URLs with your real ones -->
+          <li>
+            <a class="btn" href="https://www.facebook.com/profile.php?id=61576190023725" target="_blank" rel="noopener">
+              <span class="left">
+                <span class="icon">
+  <img src="icons/facebook.svg" alt="Facebook">
+</span>
+                <span class="label">
+                  <b>Facebook</b>
+                  <small>Facebook Proifile</small>
+                </span>
+              </span>
+              <span class="arrow">›</span>
+            </a>
+          </li>
+
+
+
+
+
+          <li>
+            <a class="btn" href="https://www.instagram.com/church_karl/" target="_blank" rel="noopener">
+              <span class="left">
+		<span class="icon">
+  <img src="icons/instagram.svg" alt="Instagram">
+</span>
+                <span class="label">
+                  <b>Instagram</b>
+                  <small>Instagram Profile</small>
+                </span>
+              </span>
+              <span class="arrow">›</span>
+            </a>
+          </li>
+
+
+
+
+
+          <li>
+            <a class="btn" href="#" target="_blank" rel="noopener">
+              <span class="left">
+                <span class="icon">📸</span>
+                <span class="label">
+                  <b>Instagram</b>
+                  <small>Updates + stories</small>
+                </span>
+              </span>
+              <span class="arrow">›</span>
+            </a>
+          </li>
+
+
+
+
+
+          <li>
+            <a class="btn" href="#" target="_blank" rel="noopener">
+              <span class="left">
+                <span class="icon">💬</span>
+                <span class="label">
+                  <b>Discord</b>
+                  <small>ZotacUK</small>
+                </span>
+              </span>
+              <span class="arrow">›</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="section-title" style="margin-top:18px;">Gaming profiles</div>
+        <ul class="links">
+          <li>
+            <a class="btn" href="#" target="_blank" rel="noopener">
+              <span class="left">
+                <span class="icon">🕹️</span>
+                <span class="label">
+                  <b>Xbox</b>
+                  <small>Gamertag: ZotacUK</small>
+                </span>
+              </span>
+              <span class="arrow">›</span>
+            </a>
+          </li>
+          <li>
+            <a class="btn" href="#" target="_blank" rel="noopener">
+              <span class="left">
+                <span class="icon">🟦</span>
+                <span class="label">
+                  <b>Steam</b>
+                  <small>Profile link</small>
+                </span>
+              </span>
+              <span class="arrow">›</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <footer class="footer">
+        <span>© <span id="year"></span> ZotacUK</span>
+        <span><a href="mailto:your@email.com">Business email</a></span>
+      </footer>
+
+    </section>
+  </main>
+
+  <script>
+    // === EASY SETTINGS ===
+    const SHOW_LIVE_BADGE = false;  // set true when you want it visible
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("liveBadge").style.display = SHOW_LIVE_BADGE ? "inline-flex" : "none";
+  </script>
+</body>
+</html>
